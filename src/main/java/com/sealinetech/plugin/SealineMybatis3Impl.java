@@ -26,7 +26,7 @@ public class SealineMybatis3Impl extends IntrospectedTableMyBatis3Impl {
                 sb.append(mapperName);
             } else {
                 sb.append(mapperName.substring(ind + 1));
-            }
+          }
             sb.append(".xml"); //$NON-NLS-1$
         } else {
             sb.append(fullyQualifiedTable.getDomainObjectName());
@@ -80,11 +80,12 @@ public class SealineMybatis3Impl extends IntrospectedTableMyBatis3Impl {
 
     public static void main(String[] args) throws Exception {
         List<String> warnings = new ArrayList<String>();
-        boolean overwrite = true;
+        //boolean overwrite = true;
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(
                 Surrogate.Generator.class.getResourceAsStream("/generatorConfig.xml"));
-        DefaultShellCallback callback = new DefaultShellCallback(overwrite);
+        // 覆盖
+        DefaultShellCallback callback = new DefaultShellCallback(true);
         MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
         myBatisGenerator.generate(null);
     }
