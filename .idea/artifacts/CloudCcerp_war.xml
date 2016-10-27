@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="CloudCcerp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="cloud-ccerp.war">
+      <element id="artifact" artifact-name="CloudCcerp:war exploded" />
+    </root>
+  </artifact>
+</component>
