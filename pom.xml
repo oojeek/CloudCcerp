@@ -18,7 +18,19 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>4.1.1.RELEASE</version>
+            <version>4.3.3.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>4.3.3.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.3.3.RELEASE</version>
         </dependency>
         <!-- springframe end -->
 
@@ -36,11 +48,11 @@
         </dependency>
         <!--面向切面编程 aspectj end-->
 
-        <!--c3p0 数据库连接池-->
+        <!--dbcp 数据库连接池-->
         <dependency>
-            <groupId>com.mchange</groupId>
-            <artifactId>c3p0</artifactId>
-            <version>0.9.5.1</version>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
         </dependency>
 
         <!--servlet/jsp api start-->

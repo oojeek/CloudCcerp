@@ -16,24 +16,24 @@ import static org.mybatis.generator.internal.util.StringUtility.stringHasValue;
  * Created by OOJEEK on 2016/10/27.
  */
 public class SealineMybatis3Impl extends IntrospectedTableMyBatis3Impl {
-    @Override
-    protected String calculateMyBatis3XmlMapperFileName() {
-        StringBuilder sb = new StringBuilder();
-        if (stringHasValue(tableConfiguration.getMapperName())) {
-            String mapperName = tableConfiguration.getMapperName();
-            int ind = mapperName.lastIndexOf('.');
-            if (ind == -1) {
-                sb.append(mapperName);
-            } else {
-                sb.append(mapperName.substring(ind + 1));
-          }
-            sb.append(".xml"); //$NON-NLS-1$
-        } else {
-            sb.append(fullyQualifiedTable.getDomainObjectName());
-            sb.append("Dao.xml"); //$NON-NLS-1$
-        }
-        return sb.toString();
-    }
+//    @Override
+//    protected String calculateMyBatis3XmlMapperFileName() {
+//        StringBuilder sb = new StringBuilder();
+//        if (stringHasValue(tableConfiguration.getMapperName())) {
+//            String mapperName = tableConfiguration.getMapperName();
+//            int ind = mapperName.lastIndexOf('.');
+//            if (ind == -1) {
+//                sb.append(mapperName);
+//            } else {
+//                sb.append(mapperName.substring(ind + 1));
+//          }
+//            sb.append(".xml"); //$NON-NLS-1$
+//        } else {
+//            sb.append(fullyQualifiedTable.getDomainObjectName());
+//            sb.append("Dao.xml"); //$NON-NLS-1$
+//        }
+//        return sb.toString();
+//    }
 
     @Override
     protected void calculateJavaClientAttributes() {
