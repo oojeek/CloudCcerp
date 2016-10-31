@@ -13,11 +13,5 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
-    <bean id="test" class="com.sealinetech.test.Test">
-        <property name="id" value="1"></property>
-        <property name="name" value="Zhang San"></property>
-        <property name="age" value="22"></property>
-    </bean>
-
     <import resource="springDao.xml"/>
 </beans>

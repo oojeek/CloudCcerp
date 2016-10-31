@@ -1,10 +1,9 @@
 package com.sealinetech.cloudccerp.pojo;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class DelegateUnit implements Serializable {
+public class DelegateUnit {
     private Integer id;
 
     private String delegateName;
@@ -53,5 +52,16 @@ public class DelegateUnit implements Serializable {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    @Override
+    public String toString() {
+        return "DelegateUnit{" +
+                "id=" + id +
+                ", delegateName='" + delegateName + '\'' +
+                ", delegateAge=" + delegateAge +
+                ", delegateDistance=" + delegateDistance +
+                ", createTime=" + createTime +
+                '}';
     }
 }

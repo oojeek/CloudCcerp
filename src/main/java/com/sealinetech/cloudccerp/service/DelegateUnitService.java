@@ -2,6 +2,8 @@ package com.sealinetech.cloudccerp.service;
 
 import com.sealinetech.cloudccerp.pojo.DelegateUnit;
 
+import java.util.List;
+
 /**
  * Created by OOJEEK on 2016/10/28.
  */
@@ -17,4 +19,6 @@ public interface DelegateUnitService {
     int updateByPrimaryKeySelective(DelegateUnit record);
 
     int updateByPrimaryKey(DelegateUnit record);
+
+    List<DelegateUnit> getRecordList();
 }

@@ -4,7 +4,7 @@
 <generatorConfiguration>
     <!--http://bbs.csdn.net/topics/391037150-->
     <!-- 一个数据库一个context -->
-    <context id="cloudCcerp" defaultModelType="flat" targetRuntime="com.sealinetech.plugin.SealineMybatis3Impl">
+    <context id="cloudCcerp" defaultModelType="flat" targetRuntime="com.sealinetech.utils.SealineMybatis3Impl">
 
         <!-- 注释 -->
         <commentGenerator>
@@ -34,8 +34,8 @@
         </javaModelGenerator>
 
         <!-- 生成mapxml文件 -->
-        <sqlMapGenerator targetPackage="com.sealinetech.cloudccerp.dao.mapper"
-                         targetProject="./src/main/java">
+        <sqlMapGenerator targetPackage="mapper"
+                         targetProject="./src/main/resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 

@@ -1,19 +1,21 @@
 package com.sealinetech.cloudccerp.service.impl;
 
-import com.sealinetech.cloudccerp.dao.DelegateUnitMapper;
+import com.sealinetech.cloudccerp.dao.DelegateUnitDao;
 import com.sealinetech.cloudccerp.pojo.DelegateUnit;
 import com.sealinetech.cloudccerp.service.DelegateUnitService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by OOJEEK on 2016/10/28.
  */
 @Service
 public class DelegateUnitServiceImpl implements DelegateUnitService {
-    @Resource
-    private DelegateUnitMapper dao;
+    @Autowired
+    private DelegateUnitDao dao;
 
     @Override
     public int deleteByPrimaryKey(Integer id) {
@@ -43,5 +45,10 @@ public class DelegateUnitServiceImpl implements DelegateUnitService {
     @Override
     public int updateByPrimaryKey(DelegateUnit record) {
         return dao.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<DelegateUnit> getRecordList() {
+        return dao.getRecordList();
     }
 }

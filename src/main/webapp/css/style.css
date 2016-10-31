@@ -1,0 +1,7 @@
+.tab{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.tab td, .tab, .tab th{
+    border: solid 1px black;
+}

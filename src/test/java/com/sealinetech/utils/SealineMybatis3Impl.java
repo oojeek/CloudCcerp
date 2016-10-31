@@ -1,6 +1,5 @@
-package com.sealinetech.plugin;
+package com.sealinetech.utils;
 
-import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.codegen.mybatis3.IntrospectedTableMyBatis3Impl;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
@@ -86,7 +85,7 @@ public class SealineMybatis3Impl extends IntrospectedTableMyBatis3Impl {
                 Surrogate.Generator.class.getResourceAsStream("/generatorConfig.xml"));
         // 覆盖
         DefaultShellCallback callback = new DefaultShellCallback(true);
-        MyBatisGenerator myBatisGenerator = new MyBatisGenerator(config, callback, warnings);
+        SealineMybatisGenerator myBatisGenerator = new SealineMybatisGenerator(config, callback, warnings);
         myBatisGenerator.generate(null);
     }
 }
